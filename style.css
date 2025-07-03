@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "forte";
+    src:
+      url(/font/forte.woff2) format("woff2"),
+      url(/font/forte.woff) format("woff");
+    font-weight: lighter;
+    font-style: lighter;
+}
+
+:root {
+    --sign-up-form-green-button: #a5a00b;
+    --sign-up-form-green-transparent: #a5a00b6e;
+    --sign-up-form-green-border: rgb(100, 128, 0);
+    --input-default-light-grey-border: #E5E7EB;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    display: flex;
+}
+/*----------------------------------------------------------------*/
+.image-container {
+    height: 100vh;
+    background-image: url(img/tea-field-nepal-by-shai-pal-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-container {
+    flex: 1.618;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(247, 247, 247);
+}
+
+.logo-container {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.329);
+    justify-content: center;
+}
+
+.logo-container img{
+    height: 13vh;
+}
+
+p.logo-text {
+    margin-top: 3.5rem;
+    font-family: "forte", Courier, monospace;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    left: -1rem;
+}
+
+p.credits-background {
+    color: white;
+    text-align: center;
+}
+
+p.credits-background a {
+    color: rgb(255, 255, 255);
+}
+
+#top-text-container {
+    margin-top: -72px;
+    padding: 0 4vw;
+}
+
+form {
+    margin-top: 5vh;
+}
+
+legend {
+    font-size: 2rem;
+}
+
+#input-section {
+    padding: 1.5vw 4vw 3.5vw 4vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 5px 5px 5px 3px lightgrey;
+}
+
+.input-row {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.input-field {
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    width: 15rem;
+    font-size: 1rem;
+}
+
+input {
+    height: 2rem;
+    border: 1px solid var(--input-default-light-grey-border);
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: var(--input-default-light-grey-border);
+}
+
+input:invalid {
+    border: 1px solid rgba(255, 146, 146, 0.712);
+}
+
+input:focus {
+    border: 2px solid var(--sign-up-form-green-border);
+}
+
+input:required:focus:valid {
+    border: 2px solid var(--sign-up-form-green-border);
+    background-color: var(--sign-up-form-green-transparent);
+}
+
+input:required:valid {
+    border: 1px solid var(--sign-up-form-green-border);
+    background-color: var(--sign-up-form-green-transparent);
+}
+
+#phone-number {
+    border: 1px solid var(--input-default-light-grey-border);
+    background-color: transparent;
+}
+
+#phone-number:focus {
+    border: 2px solid var(--sign-up-form-green-border);
+}
+
+.button-container {
+    padding: 0 4vw;
+    margin-top: 1.5rem;
+}
+
+.button-container p span a {
+    color: #a5a00b;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+}
+.success {
+    color: green;
+    font-size: 0.875rem;
+}
+
+.submit-btn {
+    background-color: var(--sign-up-form-green-button);
+    color: #fff;
+    border: none;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%;
+    font-size: 1rem;
+    opacity: 0.6; /* Initially disabled */
+    pointer-events: none; /* Initially disabled ????????Do not understand jet???????*/
+}
+.submit-btn.enabled {
+    opacity: 1; /* Enabled */
+    pointer-events: auto; /*??????Do not understand jet???????? Enabled */
+}
+.submit-btn:hover {
+    background-color: var(--sign-up-form-green-border);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Sign-up form</title>
+</head>
+
+<body>
+    <div class="image-container">
+        <div class="logo-container">
+            <img src="img/marryTea-logo-transparent-credits-ramona.webp"
+                alt="The picture shows the logo of the website">
+            <p class="logo-text">marryTea</p>
+        </div>
+        <p class="credits-background">Photo by <a href="https://unsplash.com/@shaipal">Shai Pal </a>on <a
+                href="https://unsplash.com/">Unsplash</a></p>
+    </div>
+    <div class="content-container">
+        <div id="top-text-container">
+            <h1>This is about to be a real service dog!
+                <br>How does Moses make his tea?
+                <br>Hebrews it!
+            </h1>
+            <br>
+            <h2>You're my bes<span id="bestea">tea</span>!</h2>
+        </div>
+        <form id="registrationForm">
+            <section id="input-section">
+                <legend>Let's create an account!</legend>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="name"><span aria-required="true">*</span>Name</label>
+                        <input type="text" name="name" id="name" autocomplete="username" required placeholder="Anna Otto" minlength="2">
+                    </div>
+                    <div class="input-field">
+                        <label for="email"><span aria-required="true">*</span>Email</label>
+                        <input type="email" name="email" id="email" autocomplete="username" required placeholder="name@email.com">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-field">
+                        <label for="password"><span aria-required="true">*</span>Password</label>
+                        <input type="password" name="password" id="password" autocomplete="new-password" required minlength="8" placeholder="e.g. Pa_9WoLd1+%"
+                        title="Please type in a safe password, this helps us protect your data better!">
+                    </div>
+                    <div class="input-field">
+                        <label for="confirm-password"><span aria-required="true">*</span>Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" autocomplete="new-password" required minlength="8" placeholder="Pa_9WoLd1+%">
+                        <span id="passwordError" class="error"></span>
+                    </div>
+                </div>
+            </section>
+            <div class="button-container">
+                <button type="submit" class="submit-btn" id="submitBtn">Create Account</button>
+                <p>Already have an account? <span><a href="">Log in</a></span></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
